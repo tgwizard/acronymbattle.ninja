@@ -4,7 +4,7 @@
   <p>Are you ready for battle!?</p>
 
   <ul>
-  {% for competition in competitions -%}
+  {%- for competition in competitions %}
     <li><a href="/competitions/{{ competition.slug }}">{{ competition.name }}</a></li>
   {%- endfor %}
   </ul>

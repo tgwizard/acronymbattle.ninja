@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>{{ competition.name }}</h1>
+
+  <p>
+    {%- if num_correct == 0 %}
+      You ninja'd nothing, not a single answer of {{ num_total }} acronyms was correct!
+    {%- elif num_correct == num_total %}
+      You ninja you! You got them all correct, all {{ num_total }} of them!
+    {%- else %}
+      You ninja'd {{ num_correct }} of {{ num_total }} acronyms correctly!
+    {%- endif %}
+  </p>
+
+  {%- for result in results %}
+  <div class="alert {% if result.is_correct %}alert-success{% else %}alert-danger{% endif %}">
+    <strong>{{ result.acronym.acronym }}</strong>: you answered <strong>{{ result.answer }}</strong>, correct answer is <strong>{{ result.acronym.answer }}</strong>.
+  </div>
+  {%- endfor %}
+{% endblock %}

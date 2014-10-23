@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>{{ competition.acronyms[index-1].acronym }}?</h1>
+
+  <form method="post" novalidate>
+    <input type="hidden" name="index" value="{{ index }}">
+    {%- for answer in answers %}
+    <input type="hidden" name="answers" value="{{ answer }}"/>
+    {%- endfor %}
+    <input type="text" name="answer">
+    <button type="submit">Next</button>
+  </form>
+{% endblock %}
