@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -e
 
 wget -nv https://bootstrap.pypa.io/get-pip.py
