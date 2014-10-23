@@ -2,4 +2,10 @@
 {% block content %}
   <h1>Acronym Battle, Ninja!</h1>
   <p>Are you ready for battle!?</p>
+
+  <ul>
+  {% for competition in competitions -%}
+    <li><a href="/competitions/{{ competition.slug }}">{{ competition.name }}</a></li>
+  {%- endfor %}
+  </ul>
 {% endblock %}
