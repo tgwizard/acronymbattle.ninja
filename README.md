@@ -10,7 +10,8 @@ A soon-to-be awesome competition site, [acronymbattle.ninja](http://acronymbattl
 Then:
 
 ```bash
-git@github.com:tgwizard/acronymbattle.ninja.git
+git clone git@github.com:tgwizard/acronymbattle.ninja.git
+cd acronymbattle.ninja
 vagrant up
 vagrant ssh
 python src/runserver.py
